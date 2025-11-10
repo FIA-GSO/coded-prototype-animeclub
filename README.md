@@ -1,20 +1,20 @@
-# 📋 Berichtsheft-Tool - Coded Prototype
+# Berichtsheft-Tool - Coded Prototype
 
-## 🎯 Projektübersicht
+## Projektübersicht
 
 Das **Berichtsheft-Tool** ist eine moderne, webbasierte Anwendung zur Verwaltung von Ausbildungsberichten. Dieses Projekt wurde als Teil einer Prüfungsaufgabe entwickelt und demonstriert die Umsetzung eines vollständigen User-Flow-Konzepts mit modernen Web-Technologien.
 
-### ✨ Highlights
+### Highlights
 
-- 🎨 **Modernes UI** mit Tailwind CSS Framework
-- ✅ **ISO 9241 konform** (Usability-Standards)
-- 📱 **Responsive Design** für Desktop und Mobile
-- 🔐 **Vollständiger Login-Flow** mit Feedback-System
-- 🚀 **Zero Dependencies** - Läuft direkt im Browser
+-  **Modernes UI** mit Tailwind CSS Framework
+-  **ISO 9241 konform** (Usability-Standards)
+-  **Responsive Design** für Desktop und Mobile
+-  **Vollständiger Login-Flow** mit Feedback-System
+-  **Zero Dependencies** - Läuft direkt im Browser
 
 ---
 
-## 🏗️ Projektstruktur
+##  Projektstruktur
 
 ```
 coded-prototype-animeclub/
@@ -25,56 +25,56 @@ coded-prototype-animeclub/
 
 ---
 
-## 🎨 Design & Wireframe-Umsetzung
+##  Design & Wireframe-Umsetzung
 
 Das Projekt basiert auf einem detaillierten Wireframe und User-Flow-Diagramm, das folgende Screens umfasst:
 
-### 1️⃣ **Startseite (BERICHTSHEFT-TOOL)**
+### 1️ **Startseite (BERICHTSHEFT-TOOL)**
 - Zwei Buttons: "Login" und "Registrieren"
 - Minimalistisches Design
 - Klare Call-to-Action
 
-### 2️⃣ **Login-Screen**
+### 2️ **Login-Screen**
 - Benutzername-Eingabefeld
 - Passwort-Eingabefeld
 - "Angemeldet bleiben"-Checkbox
 - "Passwort vergessen?"-Link
 - Anmelde-Button
 
-### 3️⃣ **Feedback-System**
-- ✅ **Erfolgsmeldung** (grün): "Login erfolgreich ✓"
+### 3️ **Feedback-System**
+-  **Erfolgsmeldung** (grün): "Login erfolgreich ✓"
   - ISO 9241-11: Zufriedenheit
   - Visuelle Bestätigung für erfolgreichen Login
   
-- ❌ **Fehlermeldung** (rot): "Login fehlgeschlagen ✕"
+-  **Fehlermeldung** (rot): "Login fehlgeschlagen ✕"
   - ISO 9241-110: Fehlertoleranz
   - Klare Kommunikation bei Eingabefehlern
 
-### 4️⃣ **Dashboard**
+### 4️ **Dashboard**
 - Personalisierte Begrüßung: "Willkommen, BENUTZERNAME"
 - Abmelden-Button (oben rechts)
 - Drei Hauptfunktionen als Cards:
   
-  **📝 Neuen Bericht anlegen**
+  ** Neuen Bericht anlegen**
   - Erstellen Sie einen neuen Ausbildungsbericht
   - Icon: Dokument mit Stift
   
-  **📋 Meine Berichte**
+  ** Meine Berichte**
   - Alle Ihre bisherigen Berichte anzeigen
   - Icon: Liste
   
-  **⚙️ Einstellungen**
+  ** Einstellungen**
   - Profil und Kontoeinstellungen verwalten
   - Icon: Zahnrad
 
 ---
 
-## 🛠️ Technologien
+##  Technologien
 
 ### Tailwind CSS Framework
 Das Projekt nutzt **Tailwind CSS** als primäres Styling-Framework:
 
-#### ✅ Vorteile von Tailwind CSS:
+####  Vorteile von Tailwind CSS:
 - **Utility-First Approach**: Schnelle Entwicklung durch vordefinierte Klassen
 - **Responsive Design**: Mobile-first Design out of the box
 - **Konsistenz**: Einheitliche Design-Sprache
@@ -82,7 +82,7 @@ Das Projekt nutzt **Tailwind CSS** als primäres Styling-Framework:
 - **Performance**: Nur genutzte Styles werden geladen
 - **Moderne Ästhetik**: Professionelles Look & Feel
 
-#### 📚 Verwendete Tailwind-Features:
+####  Verwendete Tailwind-Features:
 ```html
 - Layout: flex, grid, container
 - Spacing: p-{size}, m-{size}, space-{x/y}
@@ -102,27 +102,27 @@ Das Projekt nutzt **Tailwind CSS** als primäres Styling-Framework:
 
 ---
 
-## 🎯 ISO 9241 Konformität
+##  ISO 9241 Konformität
 
 Das Projekt folgt den international anerkannten Usability-Standards:
 
 ### ISO 9241-11: Gebrauchstauglichkeit
-✅ **Effektivität**: Benutzer erreichen ihre Ziele (Login, Navigation)  
-✅ **Effizienz**: Minimaler Aufwand für Aufgaben  
-✅ **Zufriedenheit**: Positives Feedback durch Erfolgsmeldungen
+ **Effektivität**: Benutzer erreichen ihre Ziele (Login, Navigation)  
+ **Effizienz**: Minimaler Aufwand für Aufgaben  
+ **Zufriedenheit**: Positives Feedback durch Erfolgsmeldungen
 
 ### ISO 9241-110: Interaktionsprinzipien
-✅ **Aufgabenangemessenheit**: Klare Funktionen pro Screen  
-✅ **Selbstbeschreibungsfähigkeit**: Eindeutige Labels und Platzhalter  
-✅ **Steuerbarkeit**: Logout-Funktion jederzeit verfügbar  
-✅ **Erwartungskonformität**: Standardmäßige Patterns (Login-Form)  
-✅ **Fehlertoleranz**: Validierung und klare Fehlermeldungen  
-✅ **Individualisierbarkeit**: "Angemeldet bleiben"-Option  
-✅ **Lernförderlichkeit**: Intuitive Navigation
+ **Aufgabenangemessenheit**: Klare Funktionen pro Screen  
+ **Selbstbeschreibungsfähigkeit**: Eindeutige Labels und Platzhalter  
+ **Steuerbarkeit**: Logout-Funktion jederzeit verfügbar  
+ **Erwartungskonformität**: Standardmäßige Patterns (Login-Form)  
+ **Fehlertoleranz**: Validierung und klare Fehlermeldungen  
+ **Individualisierbarkeit**: "Angemeldet bleiben"-Option  
+ **Lernförderlichkeit**: Intuitive Navigation
 
 ---
 
-## 🚀 Installation & Nutzung
+##  Installation & Nutzung
 
 ### Voraussetzungen
 - Moderner Webbrowser (Chrome, Firefox, Safari, Edge)
@@ -158,8 +158,8 @@ Das Projekt folgt den international anerkannten Usability-Standards:
 3. **Login testen**
    - Benutzername: beliebig (z.B. "BGUECLUE")
    - Passwort: mindestens 4 Zeichen
-   - ✅ Bei korrekter Eingabe → Dashboard
-   - ❌ Bei Fehler → Fehlermeldung
+   -  Bei korrekter Eingabe → Dashboard
+   -  Bei Fehler → Fehlermeldung
 
 4. **Features erkunden**
    - Dashboard-Cards anschauen
@@ -168,7 +168,7 @@ Das Projekt folgt den international anerkannten Usability-Standards:
 
 ---
 
-## 💡 User-Flow Beschreibung
+##  User-Flow Beschreibung
 
 ```
 ┌─────────────┐
@@ -203,7 +203,7 @@ Das Projekt folgt den international anerkannten Usability-Standards:
 
 ---
 
-## 🎨 Design-Entscheidungen
+##  Design-Entscheidungen
 
 ### Farbschema
 | Element | Farbe | Tailwind Klasse | Begründung |
@@ -226,7 +226,7 @@ Das Projekt folgt den international anerkannten Usability-Standards:
 
 ---
 
-## 📱 Responsive Design
+##  Responsive Design
 
 Das Layout passt sich automatisch an verschiedene Bildschirmgrößen an:
 
@@ -244,163 +244,4 @@ max-w-6xl                   ← Dashboard: Max 1152px Breite
 
 ---
 
-## 🔐 Sicherheitshinweis
 
-⚠️ **WICHTIG**: Dies ist ein **Prototyp** für Demonstrationszwecke!
-
-**Nicht für Production geeignet, weil:**
-- ❌ Keine echte Backend-Authentifizierung
-- ❌ Keine Passwort-Verschlüsselung
-- ❌ Keine Datenbankanbindung
-- ❌ Keine Session-Verwaltung
-- ❌ Validierung nur client-seitig
-
-**Für Production würde man benötigen:**
-- ✅ Backend-API (Node.js, PHP, Python, etc.)
-- ✅ Datenbank (MySQL, PostgreSQL, MongoDB)
-- ✅ Sichere Passwort-Hashes (bcrypt)
-- ✅ JWT/Session-Tokens
-- ✅ HTTPS
-- ✅ Input-Sanitization
-- ✅ CSRF-Schutz
-
----
-
-## 🎓 Bewertungskriterien Erfüllt
-
-### ✅ Technische Umsetzung
-- [x] HTML5 semantisch korrekt
-- [x] Tailwind CSS Framework professionell eingesetzt
-- [x] JavaScript funktional und clean
-- [x] Keine Konsolen-Fehler
-- [x] Code gut strukturiert und kommentiert
-
-### ✅ Design & UX
-- [x] Wireframe 1:1 umgesetzt
-- [x] ISO 9241 Standards befolgt
-- [x] Responsive Design implementiert
-- [x] Moderne Ästhetik
-- [x] Konsistentes Design-System
-
-### ✅ Funktionalität
-- [x] Login-System funktioniert
-- [x] Erfolgs-/Fehlermeldungen implementiert
-- [x] Dashboard mit 3 Funktionen
-- [x] Logout kehrt zu Login zurück
-- [x] Animations-Effekte
-
-### ✅ Dokumentation
-- [x] Professionelle README
-- [x] Code-Kommentare
-- [x] Klare Struktur
-- [x] Installation erklärt
-- [x] Design-Entscheidungen dokumentiert
-
----
-
-## 🚀 Erweiterungsmöglichkeiten
-
-Das Projekt kann wie folgt erweitert werden:
-
-### Phase 2 - Funktionalität
-- [ ] Registrierungs-Flow implementieren
-- [ ] "Passwort vergessen"-Funktion
-- [ ] Bericht-Erstellung (Formular)
-- [ ] Berichte-Übersicht (Tabelle/Liste)
-- [ ] Einstellungen-Seite
-- [ ] Profil-Bearbeitung
-
-### Phase 3 - Backend
-- [ ] REST API mit Node.js/Express
-- [ ] Datenbank-Integration (MongoDB/MySQL)
-- [ ] Authentifizierung mit JWT
-- [ ] Passwort-Reset per E-Mail
-- [ ] Datei-Upload für Berichte
-- [ ] PDF-Export Funktion
-
-### Phase 4 - Advanced Features
-- [ ] Dark Mode
-- [ ] Multi-Language Support (i18n)
-- [ ] Benachrichtigungs-System
-- [ ] Suchfunktion
-- [ ] Filter & Sortierung
-- [ ] Dashboard-Statistiken
-- [ ] Kalender-Integration
-
----
-
-## 📚 Ressourcen & Referenzen
-
-### Verwendete Technologien
-- [Tailwind CSS Dokumentation](https://tailwindcss.com/docs)
-- [MDN Web Docs](https://developer.mozilla.org/)
-- [ISO 9241 Standards](https://www.iso.org/standard/52075.html)
-
-### Inspirationen
-- Material Design Guidelines
-- Apple Human Interface Guidelines
-- Modern Dashboard Designs
-
-### Lernressourcen
-- [Tailwind CSS Tutorial](https://www.youtube.com/watch?v=UBOj6rqRUME)
-- [JavaScript DOM Manipulation](https://javascript.info/document)
-- [Responsive Design Best Practices](https://web.dev/responsive-web-design-basics/)
-
----
-
-## 👨‍💻 Entwickler-Notizen
-
-### Code-Qualität
-```javascript
-// Vanilla JS für maximale Kompatibilität
-// Keine Frameworks = Keine Dependencies
-// Clean Code Prinzipien befolgt
-// Event-Driven Architecture
-```
-
-### Performance
-- **Tailwind CDN**: ~450KB (gzip: ~60KB)
-- **HTML/JS**: ~10KB
-- **Gesamt**: < 500KB
-- **Load Time**: < 1s (schnelles Internet)
-
-### Browser-Kompatibilität
-- ✅ Chrome 90+
-- ✅ Firefox 88+
-- ✅ Safari 14+
-- ✅ Edge 90+
-- ⚠️ IE11: Nicht unterstützt (Tailwind benötigt moderne Browser)
-
----
-
-## 📄 Lizenz
-
-Dieses Projekt wurde für Bildungszwecke erstellt.  
-© 2025 - Berufsschule Projekt
-
----
-
-## 🎯 Fazit
-
-Dieses Projekt demonstriert:
-
-✅ **Professionelle Umsetzung** eines Wireframes in funktionalen Code  
-✅ **Modernes Web-Development** mit Tailwind CSS  
-✅ **Best Practices** in UX/UI Design  
-✅ **ISO-Standards** Konformität  
-✅ **Clean Code** Prinzipien  
-
-**Prüfungsrelevant:**
-- Vollständige Feature-Implementierung
-- Tailwind CSS Framework-Nutzung
-- Responsive Design
-- Professionelle Dokumentation
-- ISO 9241 Compliance
-
----
-
-**Viel Erfolg bei der Prüfung! 🚀**
-
----
-
-*Entwickelt mit ❤️ und Tailwind CSS*
