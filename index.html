@@ -3,23 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berichtsheft-Tool - Login</title>
-    
-    <!-- Tailwind CSS CDN -->
+    <title>Berichtsheft-Tool</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-50 min-h-screen flex items-center justify-center px-4">
     
-    <!-- Login Screen -->
+    <!-- Login -->
     <div id="loginScreen" class="w-full max-w-md">
         <div class="bg-white rounded-lg shadow-lg p-8">
             <h1 class="text-3xl font-bold text-center mb-8 text-gray-800">LOGIN</h1>
             
-            <form id="loginForm" class="space-y-6">
-                <!-- Benutzername -->
+            <form class="space-y-6">
                 <div>
                     <label for="username" class="block text-sm font-medium text-gray-700 mb-2">
                         Benutzername:
@@ -27,14 +21,12 @@
                     <input 
                         type="text" 
                         id="username" 
-                        name="username"
                         placeholder="Benutzername eingeben"
                         class="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
-                        required
+                        value="azubi"
                     >
                 </div>
                 
-                <!-- Passwort -->
                 <div>
                     <label for="password" class="block text-sm font-medium text-gray-700 mb-2">
                         Passwort:
@@ -42,18 +34,16 @@
                     <input 
                         type="password" 
                         id="password" 
-                        name="passwor"
                         placeholder="Passwort eingeben"
                         class="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
-                        required
+                        value="berichtsheft2025"
                     >
                 </div>
-                <!-- Angemeldet bleiben -->
+                
                 <div class="flex items-center">
                     <input 
                         type="checkbox" 
                         id="stayLoggedIn" 
-                        name="stayLoggedIn"
                         class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                     >
                     <label for="stayLoggedIn" class="ml-2 text-sm text-gray-700">
@@ -61,15 +51,14 @@
                     </label>
                 </div>
                 
-                <!-- Anmelden Button -->
                 <button 
-                    type="submit"
+                    type="button"
+                    onclick="document.getElementById('loginScreen').style.display='none'; document.getElementById('dashboard').style.display='block';"
                     class="w-full bg-gray-900 text-white font-semibold py-3 rounded-lg hover:bg-gray-800 transition duration-200 shadow-sm"
                 >
                     Anmelden
                 </button>
                 
-                <!-- Passwort vergessen -->
                 <div class="text-center">
                     <a href="#" class="text-sm text-gray-600 hover:text-gray-800 underline">
                         Passwort vergessen?
@@ -79,55 +68,15 @@
         </div>
     </div>
     
-    <!-- Start Screen (BERICHTSHEFT-TOOL) -->
-    <div id="startScreen" class="hidden w-full max-w-md">
-        <div class="bg-white rounded-lg shadow-lg p-8">
-            <h1 class="text-3xl font-bold text-center mb-8 text-gray-800">BERICHTSHEFT-TOOL</h1>
-            
-            <div class="space-y-4">
-                <button 
-                    onclick="showLogin()"
-                    class="w-full bg-gray-900 text-white font-semibold py-3 rounded-lg hover:bg-gray-800 transition duration-200"
-                >
-                    Login
-                </button>
-                
-                <button 
-                    class="w-full bg-white text-gray-900 font-semibold py-3 rounded-lg border-2 border-gray-900 hover:bg-gray-50 transition duration-200"
-                >
-                    Registrieren
-                </button>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Success/Error Message -->
-    <div id="feedbackMessage" class="hidden fixed top-8 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-md px-4">
-        <div id="feedbackContent" class="rounded-lg shadow-lg p-4 slide-down">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-3">
-                    <svg id="successIcon" class="hidden w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <svg id="errorIcon" class="hidden w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                    <span id="feedbackText" class="text-white font-medium"></span>
-                </div>
-            </div>
-        </div>
-    </div>
-    
     <!-- Dashboard -->
-    <div id="dashboard" class="hidden w-full max-w-6xl px-4">
+    <div id="dashboard" style="display:none;" class="w-full max-w-6xl px-4">
         <div class="bg-white rounded-lg shadow-lg p-8">
-            <!-- Header with Welcome and Logout -->
             <div class="flex justify-between items-center mb-8">
                 <h1 class="text-3xl font-bold text-gray-800">
-                    Willkommen, <span id="welcomeUser">BGUECLUE</span>
+                    Willkommen, <span>AZUBI</span>
                 </h1>
                 <button 
-                    onclick="logout()"
+                    onclick="document.getElementById('dashboard').style.display='none'; document.getElementById('loginScreen').style.display='block';"
                     class="flex items-center space-x-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition"
                 >
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -137,9 +86,7 @@
                 </button>
             </div>
             
-            <!-- Dashboard Cards -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Neuen Bericht anlegen -->
                 <div class="bg-white border-2 border-gray-200 rounded-lg p-6 hover:shadow-lg transition cursor-pointer group">
                     <div class="flex flex-col items-center text-center space-y-4">
                         <div class="bg-gray-100 p-4 rounded-full group-hover:bg-blue-50 transition">
@@ -154,7 +101,6 @@
                     </div>
                 </div>
                 
-                <!-- Meine Berichte -->
                 <div class="bg-white border-2 border-gray-200 rounded-lg p-6 hover:shadow-lg transition cursor-pointer group">
                     <div class="flex flex-col items-center text-center space-y-4">
                         <div class="bg-gray-100 p-4 rounded-full group-hover:bg-green-50 transition">
@@ -169,12 +115,11 @@
                     </div>
                 </div>
                 
-                <!-- Einstellungen -->
                 <div class="bg-white border-2 border-gray-200 rounded-lg p-6 hover:shadow-lg transition cursor-pointer group">
                     <div class="flex flex-col items-center text-center space-y-4">
                         <div class="bg-gray-100 p-4 rounded-full group-hover:bg-purple-50 transition">
                             <svg class="w-12 h-12 text-gray-700 group-hover:text-purple-600 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924-1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                             </svg>
                         </div>
@@ -188,114 +133,5 @@
         </div>
     </div>
 
-    <script>
-        // ============================================
-        // TESTDATEN FÜR LOGIN
-        // ============================================
-        // ✅ GÜLTIGE ZUGANGSDATEN (Erfolgreich):
-        //    Benutzername: azubi
-        //    Passwort: berichtsheft2025
-        //
-        //    Benutzername: admin
-        //    Passwort: admin1234
-        //
-        // ❌ UNGÜLTIGE ZUGANGSDATEN (Fehlgeschlagen):
-        //    Benutzername: falsch
-        //    Passwort: falsch
-        //
-        //    Benutzername: test
-        //    Passwort: 123 (zu kurz)
-        // ============================================
-        
-        // Vordefinierte gültige Benutzerkonten
-        const validUsers = {
-            'azubi': 'berichtsheft2025',
-            'admin': 'admin1234'
-        };
-        
-        // Login Form Handler
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            
-            // Validierung: Prüfe ob Benutzername in validUsers existiert
-            // und ob das Passwort korrekt ist
-            if (validUsers[username] && validUsers[username] === password) {
-                // ✅ Erfolgreicher Login
-                showFeedback('Login erfolgreich ✓', 'success');
-                
-                // ISO 9241-11: Zufriedenheit - Erfolg visuell kommunizieren
-                setTimeout(() => {
-                    document.getElementById('loginScreen').classList.add('hidden');
-                    document.getElementById('dashboard').classList.remove('hidden');
-                    document.getElementById('dashboard').classList.add('fade-in');
-                    
-                    // Set username in dashboard
-                    document.getElementById('welcomeUser').textContent = username.toUpperCase();
-                }, 1500);
-            } else {
-                // ❌ Fehlgeschlagener Login
-                // ISO 9241-110: Fehlertoleranz - Klare Fehlermeldung
-                if (!username || !password) {
-                    showFeedback('Bitte alle Felder ausfüllen ✕', 'error');
-                } else if (!validUsers[username]) {
-                    showFeedback('Benutzername nicht gefunden ✕', 'error');
-                } else {
-                    showFeedback('Falsches Passwort ✕', 'error');
-                }
-            }
-        });
-        
-        function showFeedback(message, type) {
-            const feedbackDiv = document.getElementById('feedbackMessage');
-            const feedbackContent = document.getElementById('feedbackContent');
-            const feedbackText = document.getElementById('feedbackText');
-            const successIcon = document.getElementById('successIcon');
-            const errorIcon = document.getElementById('errorIcon');
-            
-            feedbackText.textContent = message;
-            
-            if (type === 'success') {
-                // ISO 9241-11: Zufriedenheit - Grüne Farbe für Erfolg
-                feedbackContent.className = 'rounded-lg shadow-lg p-4 slide-down bg-green-500';
-                successIcon.classList.remove('hidden');
-                errorIcon.classList.add('hidden');
-            } else {
-                // ISO 9241-110: Fehlertoleranz - Rote Farbe für Fehler
-                feedbackContent.className = 'rounded-lg shadow-lg p-4 slide-down bg-red-500';
-                successIcon.classList.add('hidden');
-                errorIcon.classList.remove('hidden');
-            }
-            
-            feedbackDiv.classList.remove('hidden');
-            
-            // Auto-hide after 3 seconds
-            setTimeout(() => {
-                feedbackDiv.classList.add('hidden');
-            }, 3000);
-        }
-        
-        function logout() {
-            // Show feedback
-            showFeedback('Erfolgreich abgemeldet', 'success');
-            
-            // Reset form
-            document.getElementById('loginForm').reset();
-            
-            // Return to login screen after short delay
-            setTimeout(() => {
-                document.getElementById('dashboard').classList.add('hidden');
-                document.getElementById('loginScreen').classList.remove('hidden');
-                document.getElementById('loginScreen').classList.add('fade-in');
-            }, 1500);
-        }
-        
-        function showLogin() {
-            document.getElementById('startScreen').classList.add('hidden');
-            document.getElementById('loginScreen').classList.remove('hidden');
-        }
-    </script>
 </body>
 </html>
